@@ -3,7 +3,6 @@
     return fetch(`https://api.lyrics.ovh/v1/${singer}/${music}`);
 } 
 
-
 const form = document.querySelector("#form").addEventListener("submit", e => {
 
     e.preventDefault();
