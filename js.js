@@ -20,44 +20,10 @@ async function Submit() {
     
     letras.innerHTML = "<i class='fa fa-spinner fa-pulse'></i>";
 
-
-    //usando async await
-
     const responselyrics = await FindLyrics(singer.value,music.value)
     const data = await responselyrics.json();
     letras.innerHTML = data.lyrics;
     
     let a = music.value.replace(music.value[0], music.value[0].toUpperCase());
     
-    title.innerText = a;    
-
-
-    //Usando o then
-    
-    // FindLyrics(singer.value,music.value)
-    
-    // .then(Response => Response.json())
-    
-    // .then(data =>{
-        
-    //     if(data.lyrics){
-        
-
-    //         letras.innerHTML = data.lyrics;
-        
-
-    //     }
-    //     else{
-
-    //         letras.innerHTML = data.error;
-    //     }
-    // })
-
-    // .catch(erro => {
-
-    //     letras.innerHTML = `Letra não encontrada! ${erro}`;
-    // })
-    
-}
-
-
+    title.innerText = a;
